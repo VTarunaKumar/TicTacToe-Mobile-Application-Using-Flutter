@@ -10,9 +10,15 @@ class CustomButton extends StatelessWidget {
     final width = MediaQuery.of(context).size.width;
 
     return ElevatedButton(
-        onPressed: onTap,
-        // ignore: sort_child_properties_last
-        child: Text(text),
-        style: ElevatedButton.styleFrom(minimumSize: Size(width, 50)));
+      onPressed: onTap,
+      // ignore: sort_child_properties_last
+      child: Text(text,
+          style: const TextStyle(
+            fontSize: 16,
+          )),
+      style: ElevatedButton.styleFrom(
+        minimumSize: Size(width, 50),
+      ),
+    );
   }
 }
